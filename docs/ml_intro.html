@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Best Practices – DRP-HCB-Bioinformatics</title>
+<title>Guide to AI in Biology – DRP-HCB-Bioinformatics</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -101,7 +101,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Training</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./best_practices.html" aria-current="page"> 
+    <a class="nav-link" href="./best_practices.html"> 
 <span class="menu-text">Best Practices</span></a>
   </li>  
 </ul>
@@ -115,15 +115,33 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#what-is-ai-machine-learning" id="toc-what-is-ai-machine-learning" class="nav-link active" data-scroll-target="#what-is-ai-machine-learning">What is AI / Machine Learning</a></li>
+  <li><a href="#what-can-i-do-with-ai" id="toc-what-can-i-do-with-ai" class="nav-link" data-scroll-target="#what-can-i-do-with-ai">What can I do with AI?</a>
+  <ul class="collapse">
+  <li><a href="#use-existing-pretrained-models" id="toc-use-existing-pretrained-models" class="nav-link" data-scroll-target="#use-existing-pretrained-models">Use existing (pretrained) models</a></li>
+  <li><a href="#create-your-own-models" id="toc-create-your-own-models" class="nav-link" data-scroll-target="#create-your-own-models">Create your own models</a></li>
+  <li><a href="#what-about-deep-learning-deepl" id="toc-what-about-deep-learning-deepl" class="nav-link" data-scroll-target="#what-about-deep-learning-deepl">What about Deep Learning (DeepL)?</a></li>
+  <li><a href="#what-about-llms" id="toc-what-about-llms" class="nav-link" data-scroll-target="#what-about-llms">What about LLMs?</a></li>
+  </ul></li>
+  <li><a href="#how-can-i-get-started" id="toc-how-can-i-get-started" class="nav-link" data-scroll-target="#how-can-i-get-started">How can I get started?</a>
+  <ul class="collapse">
+  <li><a href="#skills-training" id="toc-skills-training" class="nav-link" data-scroll-target="#skills-training">Skills &amp; Training</a></li>
+  <li><a href="#external-resources" id="toc-external-resources" class="nav-link" data-scroll-target="#external-resources">External Resources</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Best Practices</h1>
+<h1 class="title">Guide to AI in Biology</h1>
 </div>
 
 
@@ -140,15 +158,170 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>This page contains a list of best practice documents for managing bioinformatics projects and working on the WCB servers.</p>
+<p>This is a brief overview of the fundamentals of machine learning (ML), also known as AI. For a deeper dive, jump into our courses, training, and resources at the bottom of the page.</p>
+<section id="what-is-ai-machine-learning" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-ai-machine-learning">What is AI / Machine Learning</h2>
+<p>Artificial Intelligence (AI) is a broad field that has garnered a lot of attention lately, thanks to advances in and the widespread use of machine learning (ML) models.</p>
+<p>Machine learning refers to <em>how</em> models are built. Older approaches took a top-down route, where every rule or decision a model made had to be explicitly programmed by hand (these are often called <strong>expert systems</strong>). Machine learning instead takes a bottom-up approach: the “machine” <strong>learns</strong> the rules itself from the data it’s given, rather than being told them explicitly. Thanks to major increases in computational power since the 2000s, it has become possible to train ever larger and more complex models.</p>
+<p>Expert systems have seen relatively little progress in recent years, so in everyday use “ML” and “AI” are often treated as interchangeable — though “AI” tends to get used more often, since it sounds more striking.</p>
+<p>Machine learning is technically a subfield of AI, but it is itself a wide umbrella, containing subfields such as classical ML, deep learning, and generative AI. Well-known tools like ChatGPT, AlphaFold, and random forest models all fall somewhere under this ML/AI umbrella.</p>
+</section>
+<section id="what-can-i-do-with-ai" class="level2">
+<h2 class="anchored" data-anchor-id="what-can-i-do-with-ai">What can I do with AI?</h2>
+<p>This is a huge field, but at a high level, there are two broad ways to work with AI/ML:</p>
+<ol type="1">
+<li><p><strong>Use existing tools</strong>: Apply pretrained models to your data, much like using an existing bioinformatics tool.</p></li>
+<li><p><strong>Create your own models</strong>: Build new ML models for a specific task or analysis, much like developing your own bioinformatics tool.</p></li>
+</ol>
+<section id="use-existing-pretrained-models" class="level3">
+<h3 class="anchored" data-anchor-id="use-existing-pretrained-models">Use existing (pretrained) models</h3>
+<p>There are many ready-to-use tools available, covering a wide range of tasks.</p>
+<p><strong>Large Language Models (LLMs)</strong> are the most popular of these. They’re powerful, but caution is advised if you use them for anything beyond formatting or summarizing text (see <a href="#what-about-llms">What about LLMs?</a> below for why).</p>
 <ul>
-<li><p><a href="user_policy.html">Accessing bioinformatics servers and user policy</a></p></li>
-<li><p><a href="software.html">Running and managing software on bifx-core servers</a></p></li>
-<li><p><a href="customising.html">Customising your command line experience</a></p></li>
-<li><p><a href="./ml_intro.html">Guide to AI in Biology</a></p></li>
+<li>Online tools such as ChatGPT</li>
+<li>LLMs hosted by the <a href="https://elm.edina.ac.uk/saml2/authenticate/elm">ELM Platform</a></li>
+<li>Locally-hosted LLMs, e.g.&nbsp;via <a href="https://github.com/unslothai/unsloth">Unsloth</a> or <a href="https://lmstudio.ai/">LM Studio</a></li>
 </ul>
+<p><strong>Biology-focused tools</strong> are also widely available:</p>
+<ul>
+<li><a href="https://alphafold.ebi.ac.uk/">AlphaFold</a> is probably the most prominent example, used for protein structure prediction.</li>
+<li>Many other tools exist for tasks across genomics, imaging, etc. Some are accessible online, others run locally.</li>
+</ul>
+</section>
+<section id="create-your-own-models" class="level3">
+<h3 class="anchored" data-anchor-id="create-your-own-models">Create your own models</h3>
+<p>Building your own model can range from fairly simple to highly complex, depending on how much data you have and how complicated the task is. In biology, the methodology generally falls into one of two categories, depending on the type of data available.</p>
+<p>A helpful way to think about your data: imagine a large spreadsheet, where each <strong>row</strong> is a sample and each <strong>column</strong> is a feature (e.g.&nbsp;a gene, a SNP, a protein sequence, and so on).</p>
+<p>If your data is <strong>unlabelled</strong> (i.e.&nbsp;you have not assigned your samples to categories, outcomes or any other measure) and you want to group similar samples together (a bit like constructing a naive phylogeny from scratch), you’ll use <strong>unsupervised learning</strong>.</p>
+<p><strong>Examples of unlabelled data:</strong></p>
+<ul>
+<li><p>Single-cell RNA-seq counts across thousands of genes, with no prior information about which cell type each cell belongs to.</p></li>
+<li><p>SNP genotype data across a population, where you don’t yet know how individuals group into subpopulations.</p></li>
+<li><p>Microbiome community profiles from different samples, with no predefined groupings of “similar” samples.</p></li>
+</ul>
+<p>If your data is <strong>labelled</strong> (i.e.&nbsp;a category or outcome is already assigned to each sample) and you want to build a model that accurately predicts that category for new samples, you’ll use <strong>supervised learning</strong>.</p>
+<p><strong>Examples of labelled data:</strong></p>
+<ul>
+<li><p>Images of cells labelled as cancerous or non-cancerous</p></li>
+<li><p>Transcriptomic profiles labelled by cell type or disease status</p></li>
+</ul>
+<section id="unsupervised-models" class="level4">
+<h4 class="anchored" data-anchor-id="unsupervised-models">Unsupervised models</h4>
+<p><em>Definition:</em> Unsupervised learning finds structure or patterns in data that has no predefined labels. One example is grouping samples into clusters based on similarity across features, without knowing in advance what those groups represent.</p>
+<p><strong>Common approaches:</strong></p>
+<ul>
+<li><p><strong>Clustering algorithms</strong> group similar samples together. Popular methods include <em>k-means</em> (partitions data into a fixed number of clusters), <em>hierarchical clustering</em> (builds a tree of nested clusters, similar in spirit to a phylogenetic tree), and <em>DBSCAN</em> (finds clusters of varying shape and density, and can flag outliers).</p></li>
+<li><p><strong>Dimensionality reduction</strong> techniques compress high-dimensional data (e.g.&nbsp;thousands of genes) down to a handful of components that capture most of the variation, making the data easier to visualise and interpret. Common methods include <em>PCA</em> (Principal Component Analysis), <em>t-SNE</em>, and <em>UMAP</em>.</p></li>
+</ul>
+<p><strong>Common biological use cases:</strong></p>
+<ul>
+<li><p>Identifying novel cell types or states from single-cell RNA-seq data.</p></li>
+<li><p>Uncovering population structure from SNP/genotype data.</p></li>
+<li><p>Grouping samples by expression or methylation profile to reveal disease subtypes.</p></li>
+<li><p>Visualising high-dimensional omics data in two or three dimensions for exploratory analysis</p></li>
+</ul>
+</section>
+<section id="supervised-models" class="level4">
+<h4 class="anchored" data-anchor-id="supervised-models">Supervised models</h4>
+<p><em>Definition:</em> Supervised learning trains a model on labelled examples so that it learns to predict the correct label (or value) for new, unseen data.</p>
+<p><strong>Classification vs.&nbsp;regression:</strong></p>
+<ul>
+<li><p><strong>Classification</strong> predicts a category (e.g.&nbsp;“cancerous” vs “non-cancerous”, or one of several cell types).</p></li>
+<li><p><strong>Regression</strong> predicts a continuous value (e.g.&nbsp;predicted gene expression level, or a patient’s age from methylation data).</p></li>
+</ul>
+<p><strong>Common algorithms:</strong></p>
+<ul>
+<li><p><em>Logistic regression</em> and <em>linear regression</em>: simple, interpretable baselines for classification and regression respectively.</p></li>
+<li><p><em>Random forests</em> and <em>gradient boosting</em> (e.g.&nbsp;XGBoost): ensemble tree-based methods that often perform well on structured/tabular biological data.</p></li>
+<li><p><em>Support Vector Machines (SVMs)</em>: effective for classification, particularly with smaller sample sizes and high-dimensional data.</p></li>
+<li><p><em>Neural networks</em>: flexible models capable of capturing complex, non-linear relationships, though they typically need more data to train well (see <a href="#what-about-deep-learning-deepl">Deep Learning</a> below).</p></li>
+</ul>
+<p><strong>Common biological use cases:</strong></p>
+<ul>
+<li><p>Diagnosing disease from medical images (e.g.&nbsp;classifying histopathology slides as cancerous or benign).</p></li>
+<li><p>Predicting protein function or structure-activity relationships from sequence data.</p></li>
+<li><p>Predicting drug response or toxicity from molecular features.</p></li>
+<li><p>Classifying cell type from single-cell gene expression profiles, once reference labels are .</p></li>
+</ul>
+</section>
+</section>
+<section id="what-about-deep-learning-deepl" class="level3">
+<h3 class="anchored" data-anchor-id="what-about-deep-learning-deepl">What about Deep Learning (DeepL)?</h3>
+<p>Deep learning is a subfield of machine learning based on artificial neural networks with many layers (“deep” networks), which allow the model to learn increasingly complex and abstract representations of the data.</p>
+<p><strong>Classical ML vs.&nbsp;deep learning:</strong></p>
+<ul>
+<li><p><strong>Classical ML</strong> methods (e.g.&nbsp;random forests, SVMs, logistic regression) generally rely on <em>manually engineered features</em>; a human decides, using domain knowledge, which measurements or summary statistics to feed into the model (e.g.&nbsp;GC content, expression of a specific gene panel). They tend to work well even with relatively small datasets and are often more interpretable.</p></li>
+<li><p><strong>Deep learning</strong> methods can learn useful features directly from raw data (e.g.&nbsp;raw pixel values in an image, or raw DNA/protein sequence), removing the need for manual feature engineering. This flexibility comes at a cost: deep learning models typically require much larger datasets and significantly more computational power to train well, and they are often harder to interpret (“black box” behaviour).</p></li>
+</ul>
+<p>As a rule of thumb: if you have a modest, well-structured dataset and interpretability matters, classical ML is often the better starting point. If you have very large datasets (e.g.&nbsp;large imaging or sequence datasets) and the relationships in the data are complex, deep learning may offer an advantage.</p>
+<p>Importantly, both unsupervised and supervised models can be built using either classical ML methods or deep learning. The unsupervised/supervised distinction is about <em>what kind of data and task you have</em>, while classical ML vs.&nbsp;deep learning is about <em>what kind of model you use to solve it</em>.</p>
+</section>
+<section id="what-about-llms" class="level3">
+<h3 class="anchored" data-anchor-id="what-about-llms">What about LLMs?</h3>
+<p>Large Language Models (LLMs) are a subfield of <strong>generative AI</strong>, which is distinct from the <strong>discriminative AI</strong> methods described above (unsupervised and supervised learning, as typically applied to classification or clustering tasks).</p>
+<ul>
+<li><p><strong>Discriminative models</strong> learn to distinguish between categories or predict an outcome from input data (e.g.&nbsp;“is this cell cancerous or not?”).</p></li>
+<li><p><strong>Generative models</strong>, by contrast, learn to produce new content (text, images, sequences, and so on) that resembles the data they were trained on.</p></li>
+<li><p><strong>LLMs</strong> are a type of generative model trained on huge amounts of text, and are the technology behind tools like ChatGPT.</p></li>
+</ul>
+<p>In a simplified sense, LLMs work by predicting the next word in a sequence in order to generate <em>plausible</em> (not necessarily <em>accurate</em>) text. Because of this distinction, LLM output should never be trusted as correct without verification, and LLMs frequently “hallucinate” (i.e.&nbsp;confidently produce false information, broken code, or fabricated citations).</p>
+<p>LLMs are capable at text-based tasks (and more, when used in an agentic way), including writing code. However, they become increasingly unreliable on more complex tasks, struggle with large codebases, and should never be used as a replacement for deeper, critical thinking.</p>
+</section>
+</section>
+<section id="how-can-i-get-started" class="level2">
+<h2 class="anchored" data-anchor-id="how-can-i-get-started">How can I get started?</h2>
+<p>That depends on what you want to learn! Below is a rough guide, ranked in order of increasing complexity:</p>
+<ol type="1">
+<li><p><strong>Use ready-made tools in a browser</strong>: Minimal coding or bioinformatics knowledge required.</p></li>
+<li><p><strong>Use tools on the command line</strong>: Often chained together with other bioinformatics tools, so you’ll need to be comfortable with the Linux command line (Bash).</p></li>
+<li><p><strong>Create your own models</strong>: Rrequires understanding the theory behind machine learning, so you can build models that are actually reliable and avoid common pitfalls, plus you will need to know a programming language like Python to train/test them.</p></li>
+<li><p><strong>Deeper analysis and research</strong>: Combining strong ML theory with domain expertise to push into novel methodology or applications.</p></li>
+</ol>
+<section id="skills-training" class="level3">
+<h3 class="anchored" data-anchor-id="skills-training">Skills &amp; Training</h3>
+<ul>
+<li><strong>Bash (Linux command line)</strong>: Essential for performing basic operations on computers/ and running bioinformatics tools.
+<ul>
+<li>[Link to our Bash/command-line training] - SHAUN PLEASE CHECK</li>
+</ul></li>
+<li><strong>Python</strong>: most major ML frameworks (scikit-learn, TensorFlow, PyTorch, etc.) are Python-based, so programming knowledge here goes a long way.
+<ul>
+<li>[Link to our Python training] - SHAUN PLEASE CHECK</li>
+</ul></li>
+<li><strong>Domain knowledge</strong>: Every good ML project needs good data, and depending on your project you’ll need the relevant biological/bioinformatics background to generate &amp; interpret it correctly. We offer a range of bioinformatics courses covering this.
+<ul>
+<li><a href="https://drp-hcb-bioinformatics.github.io/DRP-HCB-Bioinformatics/training.html">Bioinfromatics Training</a> - SHAUN PLEASE CHECK</li>
+</ul></li>
+<li><strong>ML theory and practice</strong>: Algorithms, good modelling practices, how to avoid common pitfalls (overfitting, data leakage, etc.), plus how to actually implement and train models in code
+<ul>
+<li><a href="">An Introduction to ML with Python</a> (Upcoming) - TO UPDATE</li>
+</ul></li>
+</ul>
+<p>We’re also happy to discuss long-term collaboration on projects. Please get in touch with Annita Chalka (achalka@ed.ac.uk) or Shaun Webb (shaun.webb@ed.ac.uk).</p>
+</section>
+<section id="external-resources" class="level3">
+<h3 class="anchored" data-anchor-id="external-resources">External Resources</h3>
+<ul>
+<li><strong>Bash</strong>
+<ul>
+<li><a href="https://swcarpentry.github.io/shell-novice/">The Unix Shell by Software Carpentry</a></li>
+</ul></li>
+<li><strong>Python</strong>
+<ul>
+<li><a href="https://scikit-learn.org/stable/index.html">Sci-kit Documentation</a>: Popular classical ML framework.</li>
+<li><a href="https://www.tensorflow.org/tutorials">Tensorflow Documentation</a>: Deep Learning ML framework.</li>
+</ul></li>
+<li><strong>ML theory and practice</strong>
+<ul>
+<li><a href="https://www.youtube.com/playlist?list=PLblh5JKOoLUICTaGLRoHQDuF_7q2GfuJF">Sciquest</a>: diagrams and overviews of popular ML algorithms.</li>
+</ul></li>
+</ul>
+<hr>
+<p><em>Have questions, or interested in collaborating? Contact us at achalka@ed.ac.uk or shaun.webb@ed.ac.uk.</em></p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
